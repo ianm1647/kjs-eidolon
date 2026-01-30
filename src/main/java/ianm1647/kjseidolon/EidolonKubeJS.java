@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 
 @Mod(EidolonKubeJS.MODID)
 public class EidolonKubeJS {
-    public static final String MODID = "worldsdemise";
+    public static final String MODID = "kjseidolon";
     public static final Logger LOGGER = LogManager.getLogger(MODID);
 
     public EidolonKubeJS(IEventBus bus) {
@@ -23,10 +23,5 @@ public class EidolonKubeJS {
     }
 
     @SubscribeEvent
-    public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Worlds Demise server is starting...");
-        if (event.getServer().acceptsSuccess()) {
-            LOGGER.info("Worlds Demise server has started successfully!");
-        }
-    }
+    public void onServerStarting(ServerStartingEvent event) {}
 }

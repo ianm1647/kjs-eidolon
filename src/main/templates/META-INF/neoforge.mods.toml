@@ -9,12 +9,6 @@ displayName="${mod_name}"
 authors="${mod_authors}"
 description='''${mod_description}'''
 
-[[mixins]]
-config = "worldsdemise.mixins.json"
-
-#[[accessTransformers]]
-#file="META-INF/accesstransformer.cfg"
-
 [[dependencies.${mod_id}]]
 modId="neoforge"
 type="required"
@@ -28,6 +22,3 @@ type="required"
 versionRange="${minecraft_version_range}"
 ordering="NONE"
 side="BOTH"
-
-#[features.${mod_id}]
-#openGLVersion="[3.2,)"
