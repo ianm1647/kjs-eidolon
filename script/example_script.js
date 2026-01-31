@@ -41,4 +41,18 @@ event.recipes.eidolon_repraised.athame_foraging(
     'minecraft:cobblestone' //block input
 )
 
+event.recipes.eidolon_repraised.worktable(
+    'minecraft:gold_block', //output
+    [' c ', 'isi', ' c '], //pattern
+    ['asds'], //reagent pattern
+    {
+        c: 'minecraft:gold_ingot',
+        i: 'minecraft:diamond',
+        s: 'minecraft:copper_ingot',
+        a: 'minecraft:apple',
+        s: 'minecraft:string',
+        d: 'minecraft:diorite'
+    } //pattern key
+)
+
 })

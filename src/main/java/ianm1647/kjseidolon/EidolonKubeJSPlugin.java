@@ -9,6 +9,7 @@ import dev.latvian.mods.kubejs.script.BindingRegistry;
 import ianm1647.kjseidolon.components.EidolonComponents;
 import ianm1647.kjseidolon.recipe.*;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.packs.resources.Resource;
 
 public class EidolonKubeJSPlugin implements KubeJSPlugin {
     @Override
@@ -34,5 +35,6 @@ public class EidolonKubeJSPlugin implements KubeJSPlugin {
         registry.register(ResourceLocation.parse("eidolon_repraised:ritual_brazier_crafting"), CraftingRitualRecipeJS.SCHEMA);
         registry.register(ResourceLocation.parse("eidolon_repraised:ritual_brazier_location"), LocateRitualRecipeJS.SCHEMA);
         registry.register(ResourceLocation.parse("eidolon_repraised:ritual_brazier_summoning"), SummonRitualRecipeJS.SCHEMA);
+        registry.register(ResourceLocation.parse("eidolon_repraised:worktable"), WorktableRecipeJS.SCHEMA);
     }
 }
