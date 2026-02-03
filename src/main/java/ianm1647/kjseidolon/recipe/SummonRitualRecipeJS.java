@@ -14,8 +14,8 @@ public interface SummonRitualRecipeJS {
     RecipeKey<List<Ingredient>> PEDESTAL_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("pedestal_items");
     RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items");
 
-    RecipeKey<Integer> COUNT = NumberComponent.INT.otherKey("count").optional(1);
-    RecipeKey<Float> HEALTH_REQUIREMENT = NumberComponent.FLOAT.otherKey("health_requirement").optional(0.0F);
+    RecipeKey<Integer> COUNT = NumberComponent.INT.otherKey("count").optional(1).defaultOptional();
+    RecipeKey<Float> HEALTH_REQUIREMENT = NumberComponent.FLOAT.otherKey("health_requirement").optional(0.0F).defaultOptional();
 
 
     RecipeSchema SCHEMA = new RecipeSchema(RESULT, REAGENT, PEDESTAL_ITEMS, FOCUS_ITEMS, COUNT, HEALTH_REQUIREMENT);

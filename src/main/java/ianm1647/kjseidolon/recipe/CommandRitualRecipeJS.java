@@ -15,9 +15,9 @@ public interface CommandRitualRecipeJS {
     RecipeKey<List<Ingredient>> REAGENT = IngredientComponent.INGREDIENT.instance().asList().inputKey("reagent");
     RecipeKey<List<Ingredient>> PEDESTAL_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("pedestal_items");
 
-    RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items").optional(List.of(Ingredient.EMPTY));
+    RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items");
 
-    RecipeKey<Float> HEALTH_REQUIREMENT = NumberComponent.FLOAT.otherKey("health_requirement").optional(0.0F);
+    RecipeKey<Float> HEALTH_REQUIREMENT = NumberComponent.FLOAT.otherKey("health_requirement").optional(0.0F).defaultOptional();
 
     RecipeSchema SCHEMA = new RecipeSchema(RESULT, REAGENT, PEDESTAL_ITEMS, FOCUS_ITEMS, HEALTH_REQUIREMENT);
 

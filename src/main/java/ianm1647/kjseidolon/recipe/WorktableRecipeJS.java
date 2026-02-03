@@ -12,11 +12,11 @@ import java.util.List;
 public interface WorktableRecipeJS {
     RecipeKey<ItemStack> RESULT = ItemStackComponent.ITEM_STACK.outputKey("result");
 
-    RecipeKey<List<String>> PATTERN = StringComponent.STRING.instance().asList().otherKey("pattern");
-    RecipeKey<List<String>> REAGENTS = StringComponent.STRING.instance().asList().otherKey("reagents");
+    RecipeKey<List<String>> PATTERN = StringComponent.STRING.instance().asList().inputKey("pattern");
+    RecipeKey<List<String>> REAGENTS = StringComponent.STRING.instance().asList().inputKey("reagents");
 
     RecipeKey<? extends TinyMap<Character, ?>> KEY =
-            MapRecipeComponent.of(CharacterComponent.CHARACTER.instance(), IngredientComponent.INGREDIENT.instance(), IntBounds.DEFAULT).otherKey("key");
+            MapRecipeComponent.of(CharacterComponent.CHARACTER.instance(), IngredientComponent.INGREDIENT.instance(), IntBounds.DEFAULT).inputKey("key");
 
     RecipeSchema SCHEMA = new RecipeSchema(RESULT, PATTERN, REAGENTS, KEY);
 }

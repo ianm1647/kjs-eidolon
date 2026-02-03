@@ -12,6 +12,7 @@ import dev.latvian.mods.rhino.type.TypeInfo;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
 
+import java.util.Collections;
 import java.util.List;
 
 public class EidolonComponents {
@@ -19,8 +20,8 @@ public class EidolonComponents {
 
     public record Steps(List<Ingredient> matches, int stirs) {
         public static Codec<Steps> CODEC = Codec.lazyInitialized(() -> RecordCodecBuilder.create((o) -> o.group(
-                Ingredient.CODEC.listOf().fieldOf("items").forGetter(Steps::matches),
-                Codec.INT.fieldOf("stirs").forGetter(Steps::stirs)
+                Ingredient.CODEC.listOf().optionalFieldOf("items", List.of()).forGetter(Steps::matches),
+                Codec.INT.optionalFieldOf("stirs", 0).forGetter(Steps::stirs)
         ).apply(o, Steps::new)));
 
         public static Steps of(List<Ingredient> matches, int stirs) {
