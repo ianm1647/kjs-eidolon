@@ -12,7 +12,7 @@ import java.util.List;
 public interface LocateRitualRecipeJS {
     RecipeKey<String> RESULT = StringComponent.STRING.instance().outputKey("structure");
 
-    RecipeKey<List<Ingredient>> REAGENT = IngredientComponent.INGREDIENT.instance().asList().inputKey("reagent");
+    RecipeKey<Ingredient> REAGENT = IngredientComponent.INGREDIENT.instance().inputKey("reagent");
     RecipeKey<List<Ingredient>> PEDESTAL_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("pedestal_items");
     RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items");
 

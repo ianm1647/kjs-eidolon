@@ -10,7 +10,7 @@ import java.util.List;
 public interface SummonRitualRecipeJS {
     RecipeKey<String> RESULT = StringComponent.STRING.instance().outputKey("output");
 
-    RecipeKey<List<Ingredient>> REAGENT = IngredientComponent.INGREDIENT.instance().asList().inputKey("reagent");
+    RecipeKey<Ingredient> REAGENT = IngredientComponent.INGREDIENT.instance().inputKey("reagent");
     RecipeKey<List<Ingredient>> PEDESTAL_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("pedestal_items");
     RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items");
 

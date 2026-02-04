@@ -14,7 +14,7 @@ import java.util.List;
 public interface CraftingRitualRecipeJS {
     RecipeKey<ItemStack> RESULT = ItemStackComponent.ITEM_STACK.outputKey("result");
 
-    RecipeKey<List<Ingredient>> REAGENT = IngredientComponent.INGREDIENT.instance().asList().inputKey("reagent");
+    RecipeKey<Ingredient> REAGENT = IngredientComponent.INGREDIENT.instance().inputKey("reagent");
     RecipeKey<List<Ingredient>> PEDESTAL_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("pedestal_items");
 
     RecipeKey<List<Ingredient>> FOCUS_ITEMS = IngredientComponent.INGREDIENT.instance().asList().inputKey("focus_items");
